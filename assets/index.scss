@@ -1,0 +1,217 @@
+@use './variables' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap');
+
+*, *::before, *::after{
+    box-sizing:border-box
+}
+
+body{
+    font-family: $font-family;
+    background-image: linear-gradient(to bottom, transparent 0 7vh, $gray 7vh),repeating-radial-gradient(circle at 100% 0%, transparent 0 2vh, $gray-alpha-13 2vh 3vh, transparent 3vh 5vh, $gray-alpha-13 5vh 6vh, transparent 6vh 8vh), radial-gradient(circle at 60% 0%, $gray-alpha-13 0 2rem, transparent 2rem), radial-gradient(circle at 70% 1%, $gray-alpha-13 0 0.8rem, transparent 0.8rem 1.2rem, $gray-alpha-63 1.2rem 1.8rem, transparent 1.8rem), radial-gradient(circle at 85% 0%, transparent 0 2.8rem, $gray-alpha-63 2.8rem 3.8rem, transparent 3.8rem), linear-gradient(to bottom, $blue-alpha-72 0 7vh, transparent 7vh);
+    color: white;
+    background-repeat: no-repeat;
+    margin: 0;
+    line-height: 1.3;
+
+    // To Stick the footer to the bottom
+    display: grid;
+    min-height: 100%;
+    grid-template-rows: 1fr auto;
+
+}
+
+h1,h2,h3,h4,h5{
+    margin-top: 0;
+}
+
+img{
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    max-width: 100%;
+    height: auto;
+}
+
+
+p:last-of-type{
+    margin-bottom: 0;
+}
+
+ul{
+    padding-inline-start: 1.2rem;
+}
+
+a{
+    color: inherit;
+    display: inline-block;
+    font-size: 1.125rem;
+    padding-block: 0.5rem;
+    text-decoration: none;
+}
+.visually-hidden{
+    position: fixed;
+    left: -50000px;
+    top: -500000px;
+}
+
+
+.unstyled-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.styled-list{
+    list-style-type: "\2714";
+}
+
+.container{
+    max-width: 400px;
+    width: 92%;
+    margin: 7vh auto;
+    @media screen and (min-width: $breakpoint) {
+        max-width: 900px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1.5rem; 
+        grid-template-areas: 
+        "header header"
+        "summary article"
+        "education article"
+        "dev-exp article"
+        "footer footer";
+    }
+}
+
+header{
+    text-align: center;
+    background-color: $gray;
+    display: flex;
+    margin-top: 1.2rem;
+    @media screen and (min-width: $breakpoint) {
+        text-align: left;
+        grid-area: header;
+    }
+    .profile-img{
+        width: 25%;
+        aspect-ratio: 1;
+        border-radius: 50%;
+    }
+    .profile-info{
+        align-self: center;
+        margin-left: 1.2rem;
+    }
+}
+
+.site-nav{
+    background-image: linear-gradient(to right, transparent, $blue-alpha-72);
+    background-color: transparent;
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) translateX(-75%);
+    padding: 1.2rem;
+    border-top-right-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+    text-align: left;
+    *{
+        opacity: 0;
+    }
+    transition: transform 350ms ease, opacity 350ms ease, background-color 350ms ease;
+    &:hover{
+        transform: translateY(-50%) translateX(0);
+        background-color: $dark;
+        *{
+            opacity: 1;
+        }
+    }
+    a{
+        color: inherit;
+        display: inline-block;
+        font-size: 1.125rem;
+        padding-block: 0.5rem;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+
+.summary{
+    grid-area: summary;
+}
+.education{
+    grid-area: education;
+}
+
+.summary, .education, .dev-exp{
+    
+        
+    @media screen and (min-width: $breakpoint){
+        width: 80%;
+        justify-self: start;
+        
+    }
+    
+}
+article{
+    
+    
+    @media screen and (min-width: $breakpoint){
+        grid-area: article;
+        height: 100vh;
+        overflow-y: scroll;
+        align-self: center;
+    }
+    &::-webkit-scrollbar {
+        width: 0.8rem;
+    }
+    
+    &::-webkit-scrollbar-track {
+        
+        background-color: $blue-alpha-72;
+    }
+    &::-webkit-scrollbar-thumb{
+        border: 1px solid;
+        border-radius: 18px;
+        background-color: $dark;
+    }
+}
+
+.summary, .education, header, article, .dev-exp{
+    
+    margin-bottom: 1.2rem;
+    padding: 0.8rem;
+    border-radius: 0.4rem;
+
+    
+}
+
+.summary,
+.education,
+header,
+article,
+.dev-exp, footer{
+    background-color: $dark;
+}
+
+footer{
+    text-align: center;
+}
+
+.socials{
+    display: flex;
+    justify-content: center;
+    a{
+        padding: 0.8rem;
+        transition: color 350ms ease;
+        &:hover{
+            color: $blue-alpha-72;
+        }
+    }
+}
+
+// scroll-bar
+

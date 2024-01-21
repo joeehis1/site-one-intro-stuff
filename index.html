@@ -8,229 +8,306 @@
             name="description"
             content="This is a portfolio website for the web developer Ehisuoria Joseph Ehigiator"
         />
-        <link rel="stylesheet" href="index.css" />
+        <link rel="stylesheet" href="./assets/index.css" />
         <title>Online Resume</title>
         <!-- The title tag displays the title of the web page -->
+        <script
+            src="https://kit.fontawesome.com/009c726f35.js"
+            crossorigin="anonymous"
+        ></script>
     </head>
     <body>
-        <header>
-            <h1>Joseph Ehigiator</h1>
-            <p>Software Developer</p>
-            <p>Toronto, Ontario</p>
-            <address>
-                <a href="tel:+16477859570">+1 (647) 785-9570</a>
-                <a href="mailto:joeehis1@gmail.com">joeehis1@gmail.com</a>
-            </address>
-        </header>
-        <section class="summary">
-            <h2>Summary</h2>
-            <p>
-                Resourceful team player with a vast knowledge of frontend web
-                development technologies, looking to apply skills at building
-                sleek web interfaces in creating appealing products
-            </p>
-        </section>
-        <section class="education">
-            <h2>Education</h2>
-            <ul>
-                <li>
-                    <p class="school">
-                        Kwame Nkrumah University Of Science and Technology,
-                        Kumasi, Ghana
-                    </p>
-                    <p class="cert">
-                        Bachelor of Science, Mechanical Engineeering
+        <div class="container">
+            <header id="home">
+                <img
+                    class="profile-img"
+                    src="./assets/img/profile.png"
+                    alt="Image of Ehisuoria Joseph Ehigiator"
+                />
+                <div class="profile-info">
+                    <h1>Joseph Ehigiator</h1>
+                    <p><strong>Software Developer</strong></p>
+                    <p>Toronto, Ontario</p>
+                    <nav class="site-nav">
+                        <ul class="unstyled-list">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#summary">Summary</a></li>
+                            <li><a href="#education">Education</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#profexp">Experience</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <section class="summary" id="summary">
+                <h2>Summary</h2>
+                <p>
+                    Resourceful team player with a vast knowledge of frontend
+                    web development technologies, looking to apply skills at
+                    building sleek web interfaces in creating appealing products
+                </p>
+            </section>
+            <section class="education" id="education">
+                <h2>Education</h2>
+                <ul class="styled-list">
+                    <li>
+                        <p class="school">
+                            Kwame Nkrumah University Of Science and Technology,
+                            Kumasi, Ghana
+                        </p>
+                        <p class="cert">
+                            Bachelor of Science, Mechanical Engineeering
+                        </p>
+                        <p>
+                            <time datetime="2005-08-01">2005</time> to
+                            <time datetime="2010-06-01">2010</time>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="school">
+                            Heriot Watt University, Edinburgh, Scotland
+                        </p>
+                        <p class="cert">
+                            Masters of Science, Petroleum Engineeering
+                        </p>
+                        <p>
+                            <time datetime="2017-08-01">2005</time> to
+                            <time datetime="2018-11-01">2018</time>
+                        </p>
+                    </li>
+                </ul>
+            </section>
+            <section class="dev-exp" id="skills">
+                <h2>Skills and Competencies</h2>
+
+                <div>
+                    <h3>Frontend Technologies</h3>
+                    <ul class="styled-list">
+                        <li>React</li>
+                        <li>Javascript</li>
+                        <li>Redux including Redux toolkit</li>
+                        <li>HTML</li>
+                        <li>CSS/SCSS</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Backend Technologies</h3>
+                    <ul class="styled-list">
+                        <li>Node</li>
+                        <li>MongoDB</li>
+                        <li>Express</li>
+                    </ul>
+                </div>
+            </section>
+            <article id="profexp">
+                <h2>Professional Experience</h2>
+                <section class="company">
+                    <h3>Transworld Systems Canada Inc</h3>
+                    <p>Job Title: Accounts Receivable Associate</p>
+                    <ul class="accomplishments">
+                        <li>
+                            Applying targeted strategies aligned with customer
+                            financial situations to secure payments on overdue
+                            debts
+                        </li>
+                        <li>
+                            Utilising company proprietary software to establish
+                            payment plans and subsequently engage customers for
+                            status updates reflecting my comfort with digital
+                            tools
+                        </li>
+                        <li>
+                            Adeptly negotiating settlements with customers
+                            experiencing dire financial situations, showcasing
+                            my empathy and negotiation prowess
+                        </li>
+                        <li>
+                            Maintaining regular customer contact specifically
+                            with those on existing payment plans, leading to
+                            significant reduction on the frequency of failed
+                            arrangements.
+                        </li>
+                    </ul>
+                </section>
+                <section class="company">
+                    <h3>MJR Capital Services</h3>
+                    <p>Job Title: Accounts Receivable Associate</p>
+                    <ul class="accomplishments">
+                        <li>
+                            Managing communication with functional managers to
+                            gather vital information showcasing my agility in
+                            extracting relevant details
+                        </li>
+                        <li>
+                            Utilised issued log to manage customer feedback
+                            leading to a 20% reduction in customer complaints
+                            during calls.
+                        </li>
+                        <li>
+                            Developed personalised daily action plans to meet
+                            collection targets, exhibiting a strategic approach
+                            towards goal setting.
+                        </li>
+                        <li>
+                            Liaising with diverse stakeholders across leadership
+                            tiers to report on collection progress, highlighting
+                            my adeptness in engaging stakeholders, akin to
+                            collaborating with multifunctional teams in software
+                            projects.
+                        </li>
+                    </ul>
+                </section>
+                <section class="company">
+                    <h3>Integrated Data Services Limited, Nigeria.</h3>
+                    <p>Job Title: Reservoir Engineer</p>
+                    <ul class="accomplishments">
+                        <li>
+                            Internship program with focus on training in the use
+                            of reservoir engineering tools for modelling and
+                            simulating production from brown fields
+                        </li>
+                        <li>
+                            Gained hands on experience with engineering tools,
+                            translating my adaptability to quickly master
+                            programming languages.
+                        </li>
+                        <li>
+                            Applied analytical skills to data modelling and
+                            simulation, showcasing problem solving capabilities
+                            applicable to frontend challenges.
+                        </li>
+                    </ul>
+                </section>
+                <section class="company">
+                    <h3>Total Exploration and Production Company</h3>
+                    <p>Job Title: Project Engineer</p>
+                    <ul class="accomplishments">
+                        <li>
+                            Actively participated in creating construction plans
+                            for key activities, underscoring my knack for
+                            planning and structuring.
+                        </li>
+                        <li>
+                            Through regular meetings, site visits and meticulous
+                            analysis of drawings and specifications, ensured
+                            work alignment with project requirements.
+                        </li>
+                        <li>
+                            Honed skills in transparent communication by
+                            presenting status reports and communicating
+                            outstanding project items to project management
+                            office.
+                        </li>
+                        <li>
+                            Maintained accurate as-built documentation and
+                            overseeing project document control, underscoring my
+                            attention to detail and the importance of accurate
+                            record-keeping -paralleling version control and
+                            documentation practises in coding.
+                        </li>
+                        <li>
+                            Facilitated seamless adaptation to project changes
+                            through analysis of contractor change order
+                            requests.
+                        </li>
+                    </ul>
+                </section>
+                <section class="company">
+                    <h3>Total Exploration and Production Company</h3>
+                    <p>Job Title: Pipeline Engineer</p>
+                    <ul class="accomplishments">
+                        <li>
+                            Steered the NOPL Gas pipeline project towards
+                            success by collaborating with stakeholders to
+                            translate project charters and requirement into
+                            tangible scopes of work
+                        </li>
+                        <li>
+                            Spearheaded the development of schedules for
+                            pipeline engineering designs. Monitored schedules
+                            and proactively addressed deviations while
+                            cultivating a strategic mindset akin to project
+                            management in software development.
+                        </li>
+                        <li>
+                            Through regular audits, ensured pipeline engineering
+                            documents adhered to project specification and
+                            industry standards by taking a meticulous approach
+                            which echoes the precision required in writing
+                            clean, compliant and optimised code.
+                        </li>
+                        <li>
+                            Reviewed design documents across various phases of
+                            the project to ensure designs were primed for
+                            success, mirroring the critical transition from
+                            design to implementation in software development.
+                        </li>
+                        <li>
+                            Dealt with technical queries during design phases
+                            and researched innovative solutions, a mindset
+                            transferrable to coding challenges and finding
+                            efficient solutions to programming problems
+                        </li>
+                        <li>
+                            Led audit processes with project technical review
+                            team to ensure alignment with company standards,
+                            mirroring the adherence to coding best practises and
+                            industry standards in software development.
+                        </li>
+                        <li>
+                            Successfully translated designs into engineered
+                            implementations within existing operational
+                            facilities, reflecting an innate ability to
+                            integrate new software into stablished ecosystems
+                        </li>
+                        <li>
+                            Performed engineering design risk analysis and made
+                            design recommendations to meet project safety
+                            objectives.
+                        </li>
+                    </ul>
+                </section>
+            </article>
+        </div>
+        <footer class="">
+            <section class="contact">
+                <h2>Get in touch</h2>
+                <ul class="socials unstyled-list">
+                    <li>
+                        <a href="#"><i class="fa-brands fa-discord"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-github-alt"></i></a>
+                    </li>
+                </ul>
+                <address>
+                    <p>
+                        <span id="label-tel" class="visually-hidden"
+                            >CellPhone:</span
+                        >
+                        <i class="fa-solid fa-phone"></i>
+                        <a aria-labelledby="label-tel" href="tel:+16477859570"
+                            >+1 (647) 785-9570</a
+                        >
                     </p>
                     <p>
-                        <time datetime="2005-08-01">2005</time> to
-                        <time datetime="2010-06-01">2010</time>
+                        <span id="label-email " class="visually-hidden"
+                            >Email:</span
+                        >
+                        <i class="fa-solid fa-envelope"></i>
+                        <a
+                            href="mailto:joeehis1@gmail.com"
+                            aria-labelledby="label-email"
+                            >joeehis1@gmail.com</a
+                        >
                     </p>
-                </li>
-                <li>
-                    <p class="school">
-                        Heriot Watt University, Edinburgh, Scotland
-                    </p>
-                    <p class="cert">
-                        Masters of Science, Petroleum Engineeering
-                    </p>
-                    <p>
-                        <time datetime="2017-08-01">2005</time> to
-                        <time datetime="2018-11-01">2018</time>
-                    </p>
-                </li>
-            </ul>
-        </section>
-        <article>
-            <h2>Professional Experience</h2>
-            <section class="company">
-                <h3>Transworld Systems Canada Inc</h3>
-                <p>Job Title: Accounts Receivable Associate</p>
-                <ul class="accomplishments">
-                    <li>
-                        Applying targeted strategies aligned with customer
-                        financial situations to secure payments on overdue debts
-                    </li>
-                    <li>
-                        Utilising company proprietary software to establish
-                        payment plans and subsequently engage customers for
-                        status updates reflecting my comfort with digital tools
-                    </li>
-                    <li>
-                        Adeptly negotiating settlements with customers
-                        experiencing dire financial situations, showcasing my
-                        empathy and negotiation prowess
-                    </li>
-                    <li>
-                        Maintaining regular customer contact specifically with
-                        those on existing payment plans, leading to significant
-                        reduction on the frequency of failed arrangements.
-                    </li>
-                </ul>
-            </section>
-            <section class="company">
-                <h3>MJR Capital Services</h3>
-                <p>Job Title: Accounts Receivable Associate</p>
-                <ul class="accomplishments">
-                    <li>
-                        Managing communication with functional managers to
-                        gather vital information showcasing my agility in
-                        extracting relevant details
-                    </li>
-                    <li>
-                        Utilised issued log to manage customer feedback leading
-                        to a 20% reduction in customer complaints during calls.
-                    </li>
-                    <li>
-                        Developed personalised daily action plans to meet
-                        collection targets, exhibiting a strategic approach
-                        towards goal setting.
-                    </li>
-                    <li>
-                        Liaising with diverse stakeholders across leadership
-                        tiers to report on collection progress, highlighting my
-                        adeptness in engaging stakeholders, akin to
-                        collaborating with multifunctional teams in software
-                        projects.
-                    </li>
-                </ul>
-            </section>
-            <section class="company">
-                <h3>Integrated Data Services Limited, Nigeria.</h3>
-                <p>Job Title: Reservoir Engineer</p>
-                <ul class="accomplishments">
-                    <li>
-                        Internship program with focus on training in the use of
-                        reservoir engineering tools for modelling and simulating
-                        production from brown fields
-                    </li>
-                    <li>
-                        Gained hands on experience with engineering tools,
-                        translating my adaptability to quickly master
-                        programming languages.
-                    </li>
-                    <li>
-                        Applied analytical skills to data modelling and
-                        simulation, showcasing problem solving capabilities
-                        applicable to frontend challenges.
-                    </li>
-                </ul>
-            </section>
-            <section class="company">
-                <h3>Total Exploration and Production Company</h3>
-                <p>Job Title: Project Engineer</p>
-                <ul class="accomplishments">
-                    <li>
-                        Actively participated in creating construction plans for
-                        key activities, underscoring my knack for planning and
-                        structuring.
-                    </li>
-                    <li>
-                        Through regular meetings, site visits and meticulous
-                        analysis of drawings and specifications, ensured work
-                        alignment with project requirements.
-                    </li>
-                    <li>
-                        Honed skills in transparent communication by presenting
-                        status reports and communicating outstanding project
-                        items to project management office.
-                    </li>
-                    <li>
-                        Maintained accurate as-built documentation and
-                        overseeing project document control, underscoring my
-                        attention to detail and the importance of accurate
-                        record-keeping -paralleling version control and
-                        documentation practises in coding.
-                    </li>
-                    <li>
-                        Facilitated seamless adaptation to project changes
-                        through analysis of contractor change order requests.
-                    </li>
-                </ul>
-            </section>
-            <section class="company">
-                <h3>Total Exploration and Production Company</h3>
-                <p>Job Title: Pipeline Engineer</p>
-                <ul class="accomplishments">
-                    <li>
-                        Steered the NOPL Gas pipeline project towards success by
-                        collaborating with stakeholders to translate project
-                        charters and requirement into tangible scopes of work
-                    </li>
-                    <li>
-                        Spearheaded the development of schedules for pipeline
-                        engineering designs. Monitored schedules and proactively
-                        addressed deviations while cultivating a strategic
-                        mindset akin to project management in software
-                        development.
-                    </li>
-                    <li>
-                        Through regular audits, ensured pipeline engineering
-                        documents adhered to project specification and industry
-                        standards by taking a meticulous approach which echoes
-                        the precision required in writing clean, compliant and
-                        optimised code.
-                    </li>
-                    <li>
-                        Reviewed design documents across various phases of the
-                        project to ensure designs were primed for success,
-                        mirroring the critical transition from design to
-                        implementation in software development.
-                    </li>
-                    <li>
-                        Dealt with technical queries during design phases and
-                        researched innovative solutions, a mindset transferrable
-                        to coding challenges and finding efficient solutions to
-                        programming problems
-                    </li>
-                    <li>
-                        Led audit processes with project technical review team
-                        to ensure alignment with company standards, mirroring
-                        the adherence to coding best practises and industry
-                        standards in software development.
-                    </li>
-                    <li>
-                        Successfully translated designs into engineered
-                        implementations within existing operational facilities,
-                        reflecting an innate ability to integrate new software
-                        into stablished ecosystems
-                    </li>
-                    <li>
-                        Performed engineering design risk analysis and made
-                        design recommendations to meet project safety
-                        objectives.
-                    </li>
-                </ul>
-            </section>
-        </article>
-        <footer>
-            <section class="socials">
-                <h2>Social Links</h2>
-                <ul class="socials">
-                    <li><a href="#">Discord</a></li>
-                    <li><a href="#">Linkedin</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Github</a></li>
-                </ul>
+                </address>
             </section>
             <h6>Designed and Coded by Ehisuoria Joseph Ehigiator</h6>
         </footer>

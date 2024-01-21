@@ -1,5 +1,17 @@
 {
-  "dependencies": {
-    "sass": "^1.70.0"
-  }
+    "dependencies": {
+        "sass": "^1.70.0"
+    },
+    "name": "test-repo-class",
+    "description": "",
+    "version": "1.0.0",
+    "main": "index.js",
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "watch-sass": "sass --watch ./assets/index.scss ./assets/index.css"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
 }

@@ -50,6 +50,24 @@ a {
   top: -500000px;
 }
 
+button {
+  display: block;
+  cursor: pointer;
+  background-color: hsla(216, 100%, 50%, 0.726);
+  color: inherit;
+  font-family: inherit;
+  border-color: whitesmoke;
+  border-radius: 0.2rem;
+  letter-spacing: 1.4px;
+}
+button:hover {
+  color: hsla(216, 100%, 50%, 0.726);
+  background-color: white;
+}
+button:disabled {
+  cursor: not-allowed;
+}
+
 .unstyled-list {
   list-style: none;
   padding: 0;
@@ -187,33 +205,49 @@ section, article {
 .education,
 header,
 .profexp,
-.dev-exp, .bio, footer {
+.dev-exp, .contact-form, footer {
   background-color: hsl(203, 13%, 35%);
 }
 
-.bio .bio-info {
-  text-align: center;
-}
-.bio .bio-img {
-  width: 200px;
+.contact-form {
+  padding: 1.2rem;
+  width: 100%;
+  max-width: 360px;
   margin: 0 auto;
 }
-@media screen and (min-width: 580px) {
-  .bio .bio-info {
-    display: grid;
-    grid-template-columns: auto, 1fr;
-    column-gap: 1rem;
-    grid-template-areas: "title title" "image text";
-  }
-  .bio .bio-info .section-title {
-    text-align: left;
-    grid-area: title;
-  }
-  .bio .bio-info .bio-info-text {
-    grid-area: text;
-    margin-top: 0;
-    text-align: left;
-  }
+.contact-form label {
+  display: grid;
+}
+.contact-form .text.message-sent {
+  color: orange;
+  text-align: center;
+}
+.contact-form label, .contact-form .text {
+  margin-bottom: 0.7rem;
+}
+.contact-form input {
+  min-height: 1.8rem;
+}
+.contact-form input, .contact-form textarea {
+  padding: 0.4rem;
+  border-radius: 0.2rem;
+  width: 100%;
+  background-color: hsla(216, 100%, 50%, 0.726);
+  color: inherit;
+  border: 1px solid transparent;
+  transition: border-color 350ms ease, outline-color 350ms ease;
+}
+.contact-form input:focus, .contact-form textarea:focus {
+  outline-color: #ffa500;
+}
+.contact-form textarea {
+  min-height: 7.6rem;
+  resize: none;
+}
+.contact-form button {
+  padding: 0.5rem;
+  width: 40%;
+  margin-left: auto;
 }
 
 footer {

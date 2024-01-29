@@ -56,6 +56,26 @@ a{
     top: -500000px;
 }
 
+button{
+    display: block;
+    cursor: pointer;
+    background-color: $blue-alpha-72;
+    color: inherit;
+    font-family: inherit;
+    border-color: whitesmoke;
+    border-radius: 0.2rem;
+    letter-spacing: 1.4px;
+    &:hover{
+        // border-color: $blue-alpha-72;
+        color: $blue-alpha-72;
+        background-color: white;
+        
+    }
+    &:disabled{
+        cursor: not-allowed;
+    }
+}
+
 
 .unstyled-list {
     list-style: none;
@@ -208,40 +228,61 @@ section, article{
 .education,
 header,
 .profexp,
-.dev-exp, .bio, footer{
+.dev-exp, .contact-form, footer{
     background-color: $dark;
 }
 
-// These styles are for the newly added bio page
-
-.bio{
-    .bio-info{
-        text-align: center;
+.contact-form{
+    
+    padding: 1.2rem;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    label{
+        display: grid;
+        
     }
-    .bio-img{
-        width: 200px;
-        margin: 0 auto;
-    }
-    @media screen and (min-width: $breakpoint) {
-        .bio-info{
-            display: grid;
-            grid-template-columns: auto, 1fr;
-            column-gap: 1rem;
-            grid-template-areas: 
-            "title title"
-            "image text";
-            .section-title{
-                text-align: left;
-                grid-area: title;
-            }
-            .bio-info-text{
-                grid-area: text;
-                margin-top: 0;
-                text-align: left;
-            }
+    .text{
+        &.message-sent{
+            color: orange;
+            text-align: center;
         }
     }
+    label, .text{
+        margin-bottom: 0.7rem;
+    }
+    input{
+        min-height: 1.8rem;
+        
+    }
+    input, textarea{
+        padding: 0.4rem;
+        border-radius: 0.2rem;
+        width: 100%;
+        background-color: $blue-alpha-72;
+        color: inherit;
+        border: 1px solid transparent;
+        transition: border-color 350ms ease, outline-color 350ms ease;
+        &:focus {
+            outline-color: $orange;
+        }
+    }
+    textarea{
+        min-height: 7.6rem;
+        resize: none;
+        
+    }
+
+    button{
+        padding: 0.5rem;
+        width: 40%;
+        margin-left: auto;
+    }
+
+
 }
+
+
 
 footer{
     text-align: center;
